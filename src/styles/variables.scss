@@ -1,0 +1,26 @@
+// fonts-sizes
+$font-h1-size: 2.4rem !default;
+$font-h2-size: 2rem !default;
+$font-h3-size: 1.8rem !default;
+$font-h4-size: 1.6rem !default;
+$body-font: 1.4rem !default;
+
+// spacing and sizes
+$container-height: 100vh !default;
+$gutter-padding: 1.5rem !default;
+
+// colors
+$white: #FFFFFF !default;
+$pastel-white: #F4F4F4 !default;
+$night-day: #323232 !default;
+
+// others
+$box-shadow: 0 0.1rem 0.2rem 0 rgba(0,0,0,.15) !default;
+$box-shadow-hover: 0 0.1rem 0.2rem rgba(0,0,0,0.19), 0 0.2rem 0.2rem rgba(0,0,0,0.23) !default;
+$animation: all .3s ease-in-out !default;
+$border-radius: 0.2rem !default;
+$border-radius-small: 1rem !default;
+
+// breakpoints-size
+$mq-from-medium: 76.8rem;
+
