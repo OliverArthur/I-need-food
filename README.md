@@ -2,7 +2,7 @@
 
 ## Application to see all the food places arround your current geolocation.
 
-### How Can I start?
+### How can I start?
 
 There is two way to start working with the project, the first one using Docker, and why Docker? Well, one of the reasons I like to work with Docker is the freedom to run the app on any platform without having all the tools that I need to start working on my computer.
 
