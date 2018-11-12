@@ -33,8 +33,7 @@ docker-compose up
 ```
 
 
-And the second option to start working on your local env, only thing is that you need make sure that you have nodejs installed.
-and then just follow the next instruction.
+And the second option to start working on your local env, only thing is that you need to make sure that you have nodejs installed. and then just follow the next instruction.
 
 make sure that your are in the root of the folder and then run:
 
