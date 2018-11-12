@@ -6,7 +6,7 @@
 
 There is two way to start working with the project, the first one using Docker, and why Docker? Well, one of the reasons I like to work with Docker is the freedom to run the app on any platform without having all the tools that I need to start working on my computer.
 
-How can I start with docker? The only thing that you need to make sure that you docker installed. [If not just download docker clicking here](https://docs.docker.com/docker-for-mac/install/) after that just follow the next instruction.
+How can I start with docker? The only thing that you need to make sure that you have docker installed. [If not just download docker clicking here](https://docs.docker.com/docker-for-mac/install/) after that just follow the next instruction.
 
 ##### Clone the repository
 
