@@ -52,7 +52,7 @@ npm run serve
 
 #### Technology used
 
-. Vuejs
-. Google Map API
-. Foursquare API
-. NPM
+1. Vuejs
+2. Google Map API
+3. Foursquare API
+4. NPM
