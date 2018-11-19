@@ -11,11 +11,8 @@ services:
     image: oarthurnardi/app
     container_name: client
     command: "npm run serve"
-    environment:
-      NODE_ENV: "development"
-      CLIENT_ID: "CXPHCCC2AKJ2LWBEMXEOZVS1FJDYDI5A5QUI2QFGNVJ1EKAI"
-      CLIENT_SECRET: "1WHPUJ2CKQCI3OEZGMOK3TIWHJZAASO2EXVVSNBX4JNBYLLE"
-      VERSION_DATE: 20181110
+    env_file:
+      - .env
     ports:
       - "8080:8080"
     volumes:

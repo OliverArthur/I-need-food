@@ -4,13 +4,13 @@
       <button class="btn-close" @click="onClickClose"><i class="material-icons">close</i></button>
     </div>
     <div class="info-window-body">
-      <h3>{{ data.payload.name }}</h3>
-      <h2>{{ data.payload.categories[0].name }}</h2>
-      <p>{{ data.payload.location.address }}, {{data.payload.location.city}}, {{ data.payload.location.postalCode }}</p>
-      <p>Phone: {{ data.payload.contact.formattedPhone }}</p>
+      <h3>{{ name }}</h3>
+      <h2>{{ categories }}</h2>
+      <p>{{ address }}, {{ city }}, {{ postCode }}</p>
+      <p>Phone: {{ phone }}</p>
       <div class="block-price">
-        <p><strong>Price:</strong> {{ data.payload.price.currency }} {{ data.payload.price.message }}</p>
-        <p><strong>Rating:</strong> {{ data.payload.rating }}</p>
+        <p><strong>Price:</strong> {{ currency }} {{ message }}</p>
+        <p><strong>Rating:</strong> {{ rating }}</p>
       </div>
     </div>
   </div>
@@ -20,8 +20,40 @@
 export default {
   name: 'InfoWindow',
   props: {
-    data: {
-      type: [Array, Object, String],
+    name: {
+      type: String,
+      required: false
+    },
+    categories: {
+      type: String,
+      required: false
+    },
+    address: {
+      type: String,
+      required: false
+    },
+    city: {
+      type: String,
+      required: false
+    },
+    postCode: {
+      type: String,
+      required: false
+    },
+    phone: {
+      type: String,
+      required: false
+    },
+    currency: {
+      type: String,
+      required: false
+    },
+    message: {
+      type: String,
+      required: false
+    },
+    rating: {
+      type: Number,
       required: false
     }
   },

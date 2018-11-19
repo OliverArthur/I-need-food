@@ -13,7 +13,15 @@
         :opened="infoWinOpen"
         @domready="onInfowindowsOpen">
         <info-window
-          :data="infoContent"
+          :name="infoContent.name"
+          :categories="infoContent.categories[0].name"
+          :address="infoContent.location.address"
+          :city="infoContent.location.city"
+          :postCode="infoContent.location.postalCode"
+          :phone="infoContent.contact.formattedPhone"
+          :currency="infoContent.price.currency"
+          :message="infoContent.price.message"
+          :rating="infoContent.rating"
           @closeclick="infoWinOpen=false">
         </info-window>
       </gmap-info-window>
@@ -147,7 +155,8 @@ export default {
         const venueId = marker.infoText.venue.id
         const venue = await Services.getVenue(venueId)
         this.infoWindowPos = { lng: marker.position.lng, lat: marker.position.lat }
-        this.infoContent = { payload: venue.response.venue }
+        this.infoContent = Object.assign({}, venue.response.venue)
+
         // check if its the same marker that was selected if yes toggle
         if (this.currentMidx === idx) {
           this.infoWinOpen = !this.infoWinOpen

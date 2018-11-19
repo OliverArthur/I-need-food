@@ -18,7 +18,7 @@ class Services {
         resolve([location.coords.latitude, location.coords.longitude])
       }, null, { enableHighAccuracy: true }))
       let [lat, lng] = position
-      const payload = { lat, lng, success: true }
+      let payload = { lat, lng, success: true }
       return payload
     } catch (err) {
       console.error(err.message)

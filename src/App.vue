@@ -8,6 +8,12 @@
     </header>
     <section class="content">
       <article class="map">
+        <div class="loading-screen" v-if="!isSuccess">
+          <p><i class="material-icons">error_outline</i></p>
+          <p>Welcome!</p>
+          <p>Our little explorer Kipper, is looking for the closest restaurants in your area.</p>
+          <p>Shortly we will show you the result of the search</p>
+        </div>
         <ui-map></ui-map>
       </article>
     </section>
@@ -22,6 +28,11 @@ import UiMap from '@/components/Map'
 export default {
   name: 'app',
   components: { UiLogo, UiMap },
+  computed: {
+    isSuccess () {
+      return this.$store.state.coordinates.success
+    }
+  },
   methods: {
     /**
      * @method getCurrentUserLocation
@@ -72,6 +83,21 @@ export default {
   cursor: pointer;
 }
 
-  // Google Maps Hack for Infowindow.
-  .gm-style-iw + div {display: none !important;}
+.loading-screen {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: $font-h1-size;
+  height: calc(#{$container-height} - #{$gutter-padding} * 6);
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.loading-screen i {
+  font-size: $font-h1-size-lg;
+}
+
+// Google Maps Hack for Infowindow.
+.gm-style-iw + div {display: none !important;}
 </style>

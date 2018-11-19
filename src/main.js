@@ -12,7 +12,7 @@ Vue.use(AsyncComputed)
 
 Vue.use(vue2GM, {
   load: {
-    key: 'AIzaSyDJp19x3o9MIWe-Yd3hvFOjLIQcAkm28PA',
+    key: process.env.VUE_APP_MAP_KEY,
     libraries: 'places'
   }
 })
